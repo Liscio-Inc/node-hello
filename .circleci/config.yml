@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Build Front-end"
+          command: "npm install"
           command: "npm run build"
       - store_artifacts:
           path: ~/project/package
