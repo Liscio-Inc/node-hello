@@ -12,6 +12,6 @@ jobs:
       - store_artifacts:
           path: ~/project/package
 workflows:
-  say-hello-workflow:
+  build_frontend:
     jobs:
       - build_frontend
