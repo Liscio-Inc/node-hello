@@ -13,7 +13,7 @@ jobs:
 #          name: Build the code
 #          command: npm run build
       - store_artifacts:
-          path: ~/project/package.json
+          path: ~/project
   build_frontend_container:
     docker:
       - image: docker:17.05.0-ce-git
