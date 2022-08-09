@@ -9,11 +9,11 @@ jobs:
       - run:
           name: install packages
           command: npm version && npm install
-      - run:
-          name: build front-end
-          command: npm run build
-      - store_artifacts:
-          path: ~/project/package
+#      - run:
+#          name: build front-end
+#          command: npm run build
+#      - store_artifacts:
+#          path: ~/project/package
 workflows:
   version: 2
   build_frontend:
