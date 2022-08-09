@@ -26,7 +26,7 @@ jobs:
           at: /tmp/project
       - run:
           name: Build the docker image
-          command: ls
+          command: ls /tmp/project
 workflows:
   version: 2
   build_frontend:
