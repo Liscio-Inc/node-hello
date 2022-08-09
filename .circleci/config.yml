@@ -7,9 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Build Front-end"
-          command: "npm install"
-          command: "npm run build"
+          - name: "Install packages"
+            command: "npm install"
+          - name: "Build the packages"
+            command: "npm run build"
       - store_artifacts:
           path: ~/project/package
 workflows:
