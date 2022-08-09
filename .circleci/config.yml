@@ -7,8 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Build the packages"
-          command: "npm install && npm run build"
+          name: install packages
+          command: npm version && npm install
+      - run:
+          name: build front-end
+          command: npm run build
       - store_artifacts:
           path: ~/project/package
 workflows:
