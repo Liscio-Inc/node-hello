@@ -24,7 +24,7 @@ jobs:
     steps:
       - run:
           name: Build the docker image
-          command: docker build -t sample:test .
+          command: ls
       - attach_workspace:
           at: .
 workflows:
