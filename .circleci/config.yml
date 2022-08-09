@@ -22,11 +22,11 @@ jobs:
     docker:
       - image: docker:17.05.0-ce-git
     steps:
+      - attach_workspace:
+          at: .
       - run:
           name: Build the docker image
           command: ls
-      - attach_workspace:
-          at: .
 workflows:
   version: 2
   build_frontend:
