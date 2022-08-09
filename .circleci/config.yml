@@ -26,4 +26,4 @@ workflows:
   build_frontend:
     jobs:
       - build_frontend_code
-#      - build_frontend_container
+      - build_frontend_container
