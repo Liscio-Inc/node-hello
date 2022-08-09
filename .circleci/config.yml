@@ -1,21 +1,29 @@
 version: 2
 jobs:
-  build_frontend:
+  build_frontend_code:
     working_directory: ~/project
     docker:
-      - image: cimg/node:15.1
+      - image: node:12-alpine
     steps:
       - checkout
       - run:
           name: Install dependencies
           command: npm install
 #      - run:
-#          name: Build Frontend
+#          name: Build the code
 #          command: npm run build
       - store_artifacts:
           path: ~/project/package.json
+  build_frontend_container:
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - run:
+          name: Build the docker image
+          command: docker build -t sample:test
 workflows:
   version: 2
   build_frontend:
     jobs:
-      - build_frontend
+      - build_frontend_code
+#      - build_frontend_container
