@@ -20,7 +20,7 @@ jobs:
     steps:
       - run:
           name: Build the docker image
-          command: docker build -t sample:test
+          command: docker build -t sample:test .
 workflows:
   version: 2
   build_frontend:
