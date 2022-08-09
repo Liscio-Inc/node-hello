@@ -7,13 +7,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install packages
-          command: npm version && npm install
+          name: Install Dependencies
+          command: npm install
 #      - run:
-#          name: build front-end
+#          name: Build Frontend
 #          command: npm run build
-#      - store_artifacts:
-#          path: ~/project/package
+      - store_artifacts:
+          path: ~/project/package.json
 workflows:
   version: 2
   build_frontend:
