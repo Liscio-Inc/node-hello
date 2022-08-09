@@ -23,7 +23,7 @@ jobs:
       - image: docker:17.05.0-ce-git
     steps:
       - attach_workspace:
-          at: .
+          at: /tmp/code
       - run:
           name: Build the docker image
           command: ls
